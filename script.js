@@ -1,3 +1,14 @@
+// 스크롤 이벤트 감지
+window.addEventListener('scroll', function() {
+    var arrow = document.getElementById('scrollArrow');
+    // 스크롤 위치가 100px 이상일 때
+    if (window.scrollY > 100) {
+        arrow.classList.add('hidden'); // 클래스 추가하여 숨김
+    } else {
+        arrow.classList.remove('hidden'); // 위로 다시 올라가면 보임
+    }
+});
+
 // ===== D-Day 계산 =====
 function calculateDday() {
     const openingDate = new Date('2026-02-21T16:00:00');
